@@ -4,6 +4,6 @@ export class Todo {
 
     constructor(public text: string) {
         this.name = text;
-        this.done = false;
+        this.done = true;
     }
 }

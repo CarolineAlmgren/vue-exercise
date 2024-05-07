@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { Todo } from './models/Todos';
 import Button from './components/Button.vue';
-let showP = false;
+import Input from './components/Input.vue';
+const showP = true;
 const todos: Todo[]= [new Todo("Städa:"), new Todo("Tvätta:"), new Todo("Handla:")]
 const numbers: number[]=[1,2,3,4,5,6,7]
 </script>
 
 <template>
 <div>
+  <Input />
   <Button />
 </div>
 
@@ -15,7 +17,7 @@ const numbers: number[]=[1,2,3,4,5,6,7]
 <ul>
   <li v-for="todo in todos">
     {{ todo.text }}
-    {{ todo.done }}
+    {{ todo.done ? 'gjort': 'ogjort' }}
   </li>
 </ul>
 </div>
@@ -25,6 +27,10 @@ const numbers: number[]=[1,2,3,4,5,6,7]
     {{ number }}
     </li>
   </ul>
+</div>
+<div>
+  <p v-if="showP">Hej Carro!</p>
+  <span v-else>Hejdå Carro!</span>
 </div>
 </template>
 

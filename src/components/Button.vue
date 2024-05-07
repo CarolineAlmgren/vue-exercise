@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const msg = "Klicka här"
+const msg = "Sök"
 const handleClick = () => {
   console.log("Knappen klickades!");
 };
